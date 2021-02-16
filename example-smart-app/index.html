@@ -100,23 +100,6 @@
     </script>
     
     <b>New Data For Proof of Concept</b>
-    <script>
-$(document).ready(function () {
-$.ajax({
-url: "https://appdevmasterpersonfunctionsprd.azurewebsites.net/api/GetUser/AaronJHuser@gillettechildrens.com?code=BlO9O0PNZbhfgvQc0abA4DNpr6bDon8Oaif83ZB4Ril10kB0tOu3bg==",
-type: "GET",
-dataType: "json",
-contentType: "application/json; charset=utf-8",
-success: function (result) {
-$("#newdata").html(result)
-},
-error: function (result) {
-alert("error");
-}
-  });
-});
-      
-</script>
     <hr/>
     Test google Image: <img src="https://www.google.com/images/branding/googlelogo/2x/googlelogo_color_272x92dp.png"/>
     <div id="newdata"></div>
