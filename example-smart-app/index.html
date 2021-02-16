@@ -12,6 +12,7 @@
     -->
   </head>
   <body>
+    
     <div id='errors'>
     </div>
     <div id="loading" class="spinner">
@@ -97,5 +98,26 @@
         }
       );
     </script>
+    
+    <b>New Data For Proof of Concept</b>
+    <script>
+$(document).ready(function () {
+$.ajax({
+url: "https://appdevmasterpersonfunctionsprd.azurewebsites.net/api/GetUser/AaronJHuser@gillettechildrens.com?code=BlO9O0PNZbhfgvQc0abA4DNpr6bDon8Oaif83ZB4Ril10kB0tOu3bg==",
+type: "GET",
+dataType: "json",
+contentType: "application/json; charset=utf-8",
+success: function (result) {
+$("#newdata").html(result)
+},
+error: function (result) {
+alert("error");
+}
+});
+
+</script>
+    <hr/>
+    <div id="newdata"></div>
+    
   </body>
 </html>
