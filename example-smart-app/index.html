@@ -102,12 +102,30 @@
       );
     </script>
     
-   
+    <script>
+$(document).ready(function () {
+
+  $.ajax({
+    url: "https://appdevmasterpersonfunctions.azurewebsites.net/api/GetUser/AaronJHuser@gillettechildrens.com?code=84e6AejcmJ3iCHIJI6IpdW646BAAOuxhyypdo/bvSV/CP4a2Kh2wSw==",
+    type: "GET",
+    dataType: "json",
+    contentType: "application/json; charset=utf-8",
+    success: function (result) {
+      $("#newdata").html(result.EmpGroups[0].EmploymentGroupName)
+    },
+    error: function (result) {
+      alert("error");
+    }
+});
+});
+</script>
     
     <b>Other Information/Testing Data And Object Calls Outside of FHIR</b>
     <hr/>
     <div id="newdata">Original Data</div>
-     <img src="https://www.gillettechildrens.org/assets/graphics/gillette-logo-gray.jpg" width="250"/>
+    
+    <img src="https://www.gillettechildrens.org/assets/graphics/gillette-logo-gray.jpg" width="250"/>
+    
     <div id='errors'>
     </div>
     <div id="loading" class="spinner">
